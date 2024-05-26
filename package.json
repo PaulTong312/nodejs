@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node src/server.js"
+    "start": "nodemon --exec babel-node src/server.js",
+    "migration": "npx sequelize-cli db:migrate",
+    "sedder": "npx sequelize-cli db:seed:all"
+
   },
   "keywords": [
     "fullstack"
