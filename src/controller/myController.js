@@ -20,7 +20,7 @@ let html = async (req, res) => {
 }
 
 let getCRUD = async (req, res) => {
-    res.render("crud.ejs");
+    return res.render("crud.ejs");
 }
 
 let postCRUD = async (req, res) => {
@@ -29,9 +29,21 @@ let postCRUD = async (req, res) => {
     return res.send("Post CRUD from server");
 }
 
+let displayGetCRUD = async (req, res) => {
+    let data = await CRUDservice.getAllUser();
+    console.log('--------------------------');
+    console.log(data);
+    console.log('--------------------------');
+    return res.render("displayCRUD.ejs", {
+        dataTable: data
+    });
+}
+
 module.exports = {
     helloWorld: helloWorld,
     html: html,
     getCRUD: getCRUD,
     postCRUD: postCRUD,
+    displayGetCRUD: displayGetCRUD,
+
 }
