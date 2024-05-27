@@ -8,7 +8,6 @@
     "start": "nodemon --exec babel-node src/server.js",
     "migration": "npx sequelize-cli db:migrate",
     "sedder": "npx sequelize-cli db:seed:all"
-
   },
   "keywords": [
     "fullstack"
@@ -16,6 +15,8 @@
   "author": "PaulTong",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
